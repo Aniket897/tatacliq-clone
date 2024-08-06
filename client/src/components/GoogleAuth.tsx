@@ -4,7 +4,7 @@ import Loader from "./Loader";
 const GoogleAuth = () => {
   const { loading } = useAuth();
   const handleAuth = () => {
-    window.open("http://localhost:8080/auth/google", "_self");
+    window.open(`${import.meta.env.VITE_SERVER_URL}/auth/google`, "_self");
   };
   return (
     <div>
