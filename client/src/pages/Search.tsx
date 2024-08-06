@@ -8,7 +8,7 @@ import Product from "../components/product/Product";
 const Search = () => {
   const [products, setProducts] = useState<ProductType[]>();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
 
   const [searchParams] = useSearchParams();
   const category = searchParams.get("category") ?? "";
@@ -42,8 +42,6 @@ const Search = () => {
         <div className="flex-1 bg-white p-4 rounded-md">
           {loading ? (
             <div>Loading...</div>
-          ) : error ? (
-            <div>Error Occure</div>
           ) : products?.length == 0 ? (
             <div>
               <h1>Result not found</h1>

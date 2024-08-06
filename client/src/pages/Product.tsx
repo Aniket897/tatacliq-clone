@@ -4,7 +4,7 @@ import { ProductType } from "../types";
 import axios from "../axios";
 
 const Product = () => {
-  const [error, setErrro] = useState(false);
+  // const [error, setErrro] = useState(false);
   const [product, setProduct] = useState<ProductType>();
   const [loading, setLoading] = useState(false);
   const { slug } = useParams();
@@ -26,15 +26,15 @@ const Product = () => {
     }
   };
 
-  const handleAddToCart = () => {};
+  // const handleAddToCart = () => {};
 
   if (loading) {
     return <p>Loading....</p>;
   }
 
-  if (error) {
-    return <p>Error Occure..</p>;
-  }
+  // if (error) {
+  //   return <p>Error Occure..</p>;
+  // }
 
   return (
     <div className="p-8">

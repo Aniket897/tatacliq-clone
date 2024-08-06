@@ -1,12 +1,12 @@
 import { useState } from "react";
-import axios from "../axios";
+// import axios from "../axios";
 import AuthRequired from "../components/AuthRequired";
 import Loader from "../components/Loader";
 import { useAuth } from "../contexts/authContext";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const [products, setProducts] = useState([]);
+  const [products] = useState([]);
 
   const { loading, isAuth } = useAuth();
   const navigate = useNavigate();
@@ -37,14 +37,14 @@ const Cart = () => {
     );
   }
 
-  const fetchMyCart = async () => {
-    try {
-      const response = await axios.get("/user/cart");
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchMyCart = async () => {
+  //   try {
+  //     const response = await axios.get("/user/cart");
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return <div></div>;
 };
